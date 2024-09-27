@@ -1,0 +1,12 @@
+# ninja log v5
+5	2806	1727424497458678474	cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	46cb37612660720c
+4	6754	1727424501395995219	cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	ef593d3a93fd7298
+6909	6987	1727424501649939000	lib/libgtest_main.a	1cc111b09b163871
+6755	6909	1727424501572693000	lib/libgtest.a	6044a652e4970a6c
+33	2121	1727425997895565927	CMakeFiles/Google_Tests_run.dir/main.cpp.o	1a20adcaee7385c6
+2122	2260	1727425998039749636	Google_Tests_run	3f77569f316a018c
+49	2778	1727425578404940641	CMakeFiles/untitled4.dir/main.cpp.o	a8226e207577a150
+63	4826	1727425072811276861	cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o	b3f58b0b5fab98f8
+56	6277	1727425074265029912	cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o	9d0f2ba05cd3c170
+43	191	1727425099521792000	lib/libgmock.a	8253d48fc2d281fc
+51	204	1727425575839937000	lib/libgmock_main.a	72744d98dd946ea8
