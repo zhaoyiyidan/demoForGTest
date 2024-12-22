@@ -1,3 +1,62 @@
-Start testing: Sep 27 16:35 CST
+Start testing: Dec 22 19:07 CST
 ----------------------------------------------------------
-End testing: Sep 27 16:35 CST
+1/2 Testing: Google_Tests_run
+1/2 Test: Google_Tests_run
+Command: "/Users/zhaokunxiang/clion/untitled4/cmake-build-debug/Google_Tests_run"
+Directory: /Users/zhaokunxiang/clion/untitled4/cmake-build-debug
+"Google_Tests_run" start time: Dec 22 19:07 CST
+Output:
+----------------------------------------------------------
+Running main() from /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest/src/gtest_main.cc
+[==========] Running 3 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from FactorialTest
+[ RUN      ] FactorialTest.HandlesZeroInput
+[       OK ] FactorialTest.HandlesZeroInput (0 ms)
+[ RUN      ] FactorialTest.HandlesPositiveInput
+[       OK ] FactorialTest.HandlesPositiveInput (0 ms)
+[----------] 2 tests from FactorialTest (0 ms total)
+
+[----------] 1 test from FooTest
+[ RUN      ] FooTest.Test1
+[       OK ] FooTest.Test1 (0 ms)
+[----------] 1 test from FooTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 2 test suites ran. (0 ms total)
+[  PASSED  ] 3 tests.
+<end of output>
+Test time =   0.83 sec
+----------------------------------------------------------
+Test Passed.
+"Google_Tests_run" end time: Dec 22 19:07 CST
+"Google_Tests_run" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: that-test-I-made
+2/2 Test: that-test-I-made
+Command: "/Users/zhaokunxiang/clion/untitled4/cmake-build-debug/Test/addtest"
+Directory: /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/Test
+"that-test-I-made" start time: Dec 22 19:07 CST
+Output:
+----------------------------------------------------------
+Running main() from /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AddTest
+[ RUN      ] AddTest.HandlesZeroInput
+[       OK ] AddTest.HandlesZeroInput (0 ms)
+[----------] 1 test from AddTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.64 sec
+----------------------------------------------------------
+Test Passed.
+"that-test-I-made" end time: Dec 22 19:07 CST
+"that-test-I-made" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 22 19:07 CST

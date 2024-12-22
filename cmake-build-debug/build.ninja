@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_Google_Tests_run: phony || cmake_object_
 
 build CMakeFiles/Google_Tests_run.dir/main.cpp.o: CXX_COMPILER__Google_Tests_run_unscanned_Debug /Users/zhaokunxiang/clion/untitled4/main.cpp || cmake_object_order_depends_target_Google_Tests_run
   DEP_FILE = CMakeFiles/Google_Tests_run.dir/main.cpp.o.d
-  FLAGS = -g -std=gnu++17 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6 -fcolor-diagnostics
+  FLAGS = -g -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
   INCLUDES = -isystem /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest/include -isystem /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest
   OBJECT_DIR = CMakeFiles/Google_Tests_run.dir
   OBJECT_FILE_DIR = CMakeFiles/Google_Tests_run.dir
@@ -65,7 +65,7 @@ build CMakeFiles/Google_Tests_run.dir/main.cpp.o: CXX_COMPILER__Google_Tests_run
 # Link the executable Google_Tests_run
 
 build Google_Tests_run: CXX_EXECUTABLE_LINKER__Google_Tests_run_Debug CMakeFiles/Google_Tests_run.dir/main.cpp.o | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a
   OBJECT_DIR = CMakeFiles/Google_Tests_run.dir
   POST_BUILD = :
@@ -73,37 +73,17 @@ build Google_Tests_run: CXX_EXECUTABLE_LINKER__Google_Tests_run_Debug CMakeFiles
   TARGET_FILE = Google_Tests_run
   TARGET_PDB = Google_Tests_run.dbg
 
-# =============================================================================
-# Object build statements for EXECUTABLE target untitled4
-
 
 #############################################
-# Order-only phony target for untitled4
+# Utility command for test
 
-build cmake_object_order_depends_target_untitled4: phony || CMakeFiles/untitled4.dir
+build CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/zhaokunxiang/clion/untitled4/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
 
-build CMakeFiles/untitled4.dir/main.cpp.o: CXX_COMPILER__untitled4_unscanned_Debug /Users/zhaokunxiang/clion/untitled4/main.cpp || cmake_object_order_depends_target_untitled4
-  DEP_FILE = CMakeFiles/untitled4.dir/main.cpp.o.d
-  FLAGS = -g -std=gnu++17 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6 -fcolor-diagnostics
-  INCLUDES = -I/Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest/include -I/Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest
-  OBJECT_DIR = CMakeFiles/untitled4.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled4.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target untitled4
-
-
-#############################################
-# Link the executable untitled4
-
-build untitled4: CXX_EXECUTABLE_LINKER__untitled4_Debug CMakeFiles/untitled4.dir/main.cpp.o
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6
-  OBJECT_DIR = CMakeFiles/untitled4.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = untitled4
-  TARGET_PDB = untitled4.dbg
+build test: phony CMakeFiles/test.util
 
 
 #############################################
@@ -174,6 +154,18 @@ build install/strip: phony CMakeFiles/install/strip.util
 # Write statements declared in CMakeLists.txt:
 # /Users/zhaokunxiang/clion/untitled4/CMakeLists.txt
 # =============================================================================
+
+
+#############################################
+# Utility command for test
+
+build cmake-build-debug/googletest-main_副本/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/cmake-build-debug/googletest-main_副本 && /Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build cmake-build-debug/googletest-main_副本/test: phony cmake-build-debug/googletest-main_副本/CMakeFiles/test.util
 
 
 #############################################
@@ -256,7 +248,7 @@ build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depen
 
 build cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_COMPILER__gmock_unscanned_Debug /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
   DEP_FILE = cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
-  FLAGS = -g -std=c++17 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6 -fcolor-diagnostics  -DGTEST_HAS_PTHREAD=1
+  FLAGS = -g -std=c++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics  -DGTEST_HAS_PTHREAD=1
   INCLUDES = -I/Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googlemock/include -I/Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googlemock -isystem /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest/include -isystem /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest
   OBJECT_DIR = cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock.dir
   OBJECT_FILE_DIR = cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock.dir/src
@@ -270,7 +262,7 @@ build cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock.dir/s
 # Link the static library lib/libgmock.a
 
 build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o || lib/libgtest.a
-  ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6
+  ARCH_FLAGS = -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock.dir
   POST_BUILD = :
@@ -289,7 +281,7 @@ build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_
 
 build cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: CXX_COMPILER__gmock_main_unscanned_Debug /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
   DEP_FILE = cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
-  FLAGS = -g -std=c++17 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6 -fcolor-diagnostics  -DGTEST_HAS_PTHREAD=1
+  FLAGS = -g -std=c++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics  -DGTEST_HAS_PTHREAD=1
   INCLUDES = -isystem /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googlemock/include -isystem /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googlemock -isystem /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest/include -isystem /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest
   OBJECT_DIR = cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock_main.dir
   OBJECT_FILE_DIR = cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock_main.dir/src
@@ -303,13 +295,25 @@ build cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock_main.
 # Link the static library lib/libgmock_main.a
 
 build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o || lib/libgmock.a lib/libgtest.a
-  ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6
+  ARCH_FLAGS = -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/gmock_main.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = lib/libgmock_main.a
   TARGET_PDB = gmock_main.a.dbg
+
+
+#############################################
+# Utility command for test
+
+build cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/cmake-build-debug/googletest-main_副本/googlemock && /Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build cmake-build-debug/googletest-main_副本/googlemock/test: phony cmake-build-debug/googletest-main_副本/googlemock/CMakeFiles/test.util
 
 
 #############################################
@@ -392,7 +396,7 @@ build cmake_object_order_depends_target_gtest: phony || cmake-build-debug/google
 
 build cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_COMPILER__gtest_unscanned_Debug /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
   DEP_FILE = cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
-  FLAGS = -g -std=c++17 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6 -fcolor-diagnostics  -DGTEST_HAS_PTHREAD=1
+  FLAGS = -g -std=c++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics  -DGTEST_HAS_PTHREAD=1
   INCLUDES = -I/Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest/include -I/Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest
   OBJECT_DIR = cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest.dir
   OBJECT_FILE_DIR = cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest.dir/src
@@ -406,7 +410,7 @@ build cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest.dir/s
 # Link the static library lib/libgtest.a
 
 build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
-  ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6
+  ARCH_FLAGS = -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest.dir
   POST_BUILD = :
@@ -425,7 +429,7 @@ build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_
 
 build cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: CXX_COMPILER__gtest_main_unscanned_Debug /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
   DEP_FILE = cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
-  FLAGS = -g -std=c++17 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6 -fcolor-diagnostics  -DGTEST_HAS_PTHREAD=1
+  FLAGS = -g -std=c++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics  -DGTEST_HAS_PTHREAD=1
   INCLUDES = -isystem /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest/include -isystem /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest
   OBJECT_DIR = cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest_main.dir
   OBJECT_FILE_DIR = cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest_main.dir/src
@@ -439,13 +443,25 @@ build cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest_main.
 # Link the static library lib/libgtest_main.a
 
 build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o || lib/libgtest.a
-  ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6
+  ARCH_FLAGS = -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/gtest_main.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = lib/libgtest_main.a
   TARGET_PDB = gtest_main.a.dbg
+
+
+#############################################
+# Utility command for test
+
+build cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/cmake-build-debug/googletest-main_副本/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build cmake-build-debug/googletest-main_副本/googletest/test: phony cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/test.util
 
 
 #############################################
@@ -513,7 +529,124 @@ build cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/install/str
 build cmake-build-debug/googletest-main_副本/googletest/install/strip: phony cmake-build-debug/googletest-main_副本/googletest/CMakeFiles/install/strip.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/zhaokunxiang/clion/untitled4/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target addtest
+
+
+#############################################
+# Order-only phony target for addtest
+
+build cmake_object_order_depends_target_addtest: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build Test/CMakeFiles/addtest.dir/test.cpp.o: CXX_COMPILER__addtest_unscanned_Debug /Users/zhaokunxiang/clion/untitled4/Test/test.cpp || cmake_object_order_depends_target_addtest
+  DEP_FILE = Test/CMakeFiles/addtest.dir/test.cpp.o.d
+  FLAGS = -g -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  INCLUDES = -isystem /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest/include -isystem /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/googletest-main_副本/googletest
+  OBJECT_DIR = Test/CMakeFiles/addtest.dir
+  OBJECT_FILE_DIR = Test/CMakeFiles/addtest.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target addtest
+
+
+#############################################
+# Link the executable Test/addtest
+
+build Test/addtest: CXX_EXECUTABLE_LINKER__addtest_Debug Test/CMakeFiles/addtest.dir/test.cpp.o | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+  LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a
+  OBJECT_DIR = Test/CMakeFiles/addtest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Test/addtest
+  TARGET_PDB = addtest.dbg
+
+
+#############################################
+# Utility command for test
+
+build Test/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/Test && /Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build Test/test: phony Test/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build Test/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/Test && /Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Test/edit_cache: phony Test/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Test/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/Test && /Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake --regenerate-during-build -S/Users/zhaokunxiang/clion/untitled4 -B/Users/zhaokunxiang/clion/untitled4/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Test/rebuild_cache: phony Test/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build Test/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build Test/CMakeFiles/install.util: CUSTOM_COMMAND Test/all
+  COMMAND = cd /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/Test && /Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build Test/install: phony Test/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build Test/CMakeFiles/install/local.util: CUSTOM_COMMAND Test/all
+  COMMAND = cd /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/Test && /Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build Test/install/local: phony Test/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build Test/CMakeFiles/install/strip.util: CUSTOM_COMMAND Test/all
+  COMMAND = cd /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/Test && /Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build Test/install/strip: phony Test/CMakeFiles/install/strip.util
+
+# =============================================================================
 # Target aliases.
+
+build addtest: phony Test/addtest
 
 build gmock: phony lib/libgmock.a
 
@@ -539,7 +672,14 @@ build libgtest_main.a: phony lib/libgtest_main.a
 #############################################
 # Folder: /Users/zhaokunxiang/clion/untitled4/cmake-build-debug
 
-build all: phony Google_Tests_run untitled4 cmake-build-debug/googletest-main_副本/all
+build all: phony Google_Tests_run cmake-build-debug/googletest-main_副本/all Test/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/zhaokunxiang/clion/untitled4/cmake-build-debug/Test
+
+build Test/all: phony Test/addtest
 
 # =============================================================================
 
@@ -569,14 +709,14 @@ build cmake-build-debug/googletest-main_副本/googletest/all: phony lib/libgtes
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake /Users/zhaokunxiang/clion/untitled4/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake googletest-main_副本/CMakeLists.txt googletest-main_副本/googlemock/CMakeLists.txt googletest-main_副本/googlemock/cmake/gmock.pc.in googletest-main_副本/googlemock/cmake/gmock_main.pc.in googletest-main_副本/googletest/CMakeLists.txt googletest-main_副本/googletest/cmake/Config.cmake.in googletest-main_副本/googletest/cmake/gtest.pc.in googletest-main_副本/googletest/cmake/gtest_main.pc.in googletest-main_副本/googletest/cmake/internal_utils.cmake
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake /Users/zhaokunxiang/clion/untitled4/CMakeLists.txt /Users/zhaokunxiang/clion/untitled4/Test/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake googletest-main_副本/CMakeLists.txt googletest-main_副本/googlemock/CMakeLists.txt googletest-main_副本/googlemock/cmake/gmock.pc.in googletest-main_副本/googlemock/cmake/gmock_main.pc.in googletest-main_副本/googletest/CMakeLists.txt googletest-main_副本/googletest/cmake/Config.cmake.in googletest-main_副本/googletest/cmake/gtest.pc.in googletest-main_副本/googletest/cmake/gtest_main.pc.in googletest-main_副本/googletest/cmake/internal_utils.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake /Users/zhaokunxiang/clion/untitled4/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake googletest-main_副本/CMakeLists.txt googletest-main_副本/googlemock/CMakeLists.txt googletest-main_副本/googlemock/cmake/gmock.pc.in googletest-main_副本/googlemock/cmake/gmock_main.pc.in googletest-main_副本/googletest/CMakeLists.txt googletest-main_副本/googletest/cmake/Config.cmake.in googletest-main_副本/googletest/cmake/gtest.pc.in googletest-main_副本/googletest/cmake/gtest_main.pc.in googletest-main_副本/googletest/cmake/internal_utils.cmake: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake /Users/zhaokunxiang/clion/untitled4/CMakeLists.txt /Users/zhaokunxiang/clion/untitled4/Test/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake googletest-main_副本/CMakeLists.txt googletest-main_副本/googlemock/CMakeLists.txt googletest-main_副本/googlemock/cmake/gmock.pc.in googletest-main_副本/googlemock/cmake/gmock_main.pc.in googletest-main_副本/googletest/CMakeLists.txt googletest-main_副本/googletest/cmake/Config.cmake.in googletest-main_副本/googletest/cmake/gtest.pc.in googletest-main_副本/googletest/cmake/gtest_main.pc.in googletest-main_副本/googletest/cmake/internal_utils.cmake: phony
 
 
 #############################################
